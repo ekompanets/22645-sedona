@@ -10,9 +10,6 @@
 <body>
 	<div class="layout-center-wrapper">
 		<header class="page-header">
-			<div class="page-header__logo-wrap">
-				<a href="" class="page-header__logo-link"><img src="" alt="Sedona"></a>			
-			</div>	
 			<nav class="main-nav">
 				<ul class="main-nav__list">
 					<li><a href="">Карта штата</a></li>
@@ -21,74 +18,73 @@
 					<li><a href="">Гостиницы</a></li>
 				</ul>
 				<a href="#" class="main-nav__toggle  main-nav__toggle--close"></a>
-				<a href="#" class="main-nav__logo-item">Главная</a>
+				<a href="#"><img src="#" class="main-nav__logo" alt="City of Sedona"></a>
+				<a href="#" class="main-nav__toggle  main-nav__toggle--open"></a>
 			</nav>		
 		</header>	
 		
 
 
 		<main>
-			<section class="promo-sedona">	
-				<!-- .promo-sedona__inner>.promo-sedona__wrapper>(.promo-sedona__small-town>(h1.promo-sedona__title+p.promo-sedona__descr))+ul.promo-sedona__reasons>li*5 -->
-				<div class="promo-sedona__inner">
-					<div class="promo-sedona__wrapper">
-						<div class="promo-sedona__header">
-							<h1 class="promo-sedona__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-							<p class="promo-sedona__descr">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-						</div>
-						<ul class="promo-sedona__reasons">
+			<section class="promo">	
+				<!-- .promo__inner>.promo__wrapper>(.promo__small-town>(h1.promo__title+p.promo__descr))+ul.promo__reasons>li*5 -->
+				<div class="promo__inner">
+						<header class="promo__header">
+							<h1 class="promo__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+							<p class="promo__descr">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+						</header>
+						<ul class="promo__reasons">
 							<li class="">
-								<!-- (.promo-sedona__reason-header>h2.promo-sedona__reason-header--title+span.promo-sedona__reason-header--num+span.promo-sedona__reason-header--descr)+.promo-sedona__reason-content>(.promo-sedona__reason-content--house>p+span)+(.promo-sedona__reason-content--gift>p+span)+(.promo-sedona__reason-content--food>p+span) -->
-								<div class="promo-sedona__reason-header">
-									<h2 class="promo-sedona__reason-header--title">Настоящий городок</h2>
-									<span class="promo-sedona__reason-header--num">№1</span>
-									<span class="promo-sedona__reason-header--descr">Седона не аттракцион для туристов, там течет своя жизнь</span>
+								<!-- (.promo__reason-header>h2.promo__reason-header--title+span.promo__reason-header--num+span.promo__reason-header--descr)+.promo__reason-content>(.promo__reason-content--house>p+span)+(.promo__reason-content--gift>p+span)+(.promo__reason-content--food>p+span) -->
+								<div class="promo__reason-header">
+									<h2 class="promo__reason-title">Настоящий городок</h2>
+									<span class="promo__reason-num">№1</span>
+									<span class="promo__reason-descr">Седона не аттракцион для туристов, там течет своя жизнь</span>
 								</div>
-								<div class="promo-sedona__reason-content">
-									<div class="promo-sedona__reason-content--house">
-										<p>Жилье</p>
-										<span>Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
-									</div>
-									<div class="promo-sedona__reason-content--gift">
-										<p>Сувениры</p>
-										<span>Не только китайского, но и местного производства!</span>
-									</div>
-									<div class="promo-sedona__reason-content--food">
-										<p>Еда</p>
-										<span>Всегда заказывайте фирменный бургер,вы не разочаруетесь!</span>
-									</div>
+								<ul class="promo__reason-content">
+									<li>
+										<h3 class="promo__subreason-house">Жилье</h3>
+										<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+									</li>
+									<li>
+										<h3 class="promo__subreason-gift">Сувениры</h3>
+										<p>Не только китайского, но и местного производства!</p>
+									</li>
+									<li>
+										<h3 class="promo__subreason-food">Еда</h3>
+										<p>Всегда заказывайте фирменный бургер,вы не разочаруетесь!</p>
+									</li>
+								</ul>
+							</li>
+							<li class="promo__resons-item">
+								<div class="promo__reason-header">
+									<h2 class="promo__reason-title">Там есть мост Дьявола</h2>
+									<span class="promo__reason-num">№2</span>
+									<span class="promo__reason-descr">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
 								</div>
 							</li>
-							<li class="promo-sedona__resons-item">
-								<div class="promo-sedona__reason-header">
-									<h2 class="promo-sedona__reason-header--title">Там есть мост Дьявола</h2>
-									<span class="promo-sedona__reason-header--num">№2</span>
-									<span class="promo-sedona__reason-header--descr">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+							<li class="promo__resons-item">
+								<div class="promo__reason-header">
+									<h2 class="promo__reason-title">Небольшая площадь</h2>
+									<span class="promo__reason-num">№3</span>
+									<span class="promo__reason-descr">Все достопримечательностя находятся очень близко</span>
 								</div>
 							</li>
-							<li class="promo-sedona__resons-item">
-								<div class="promo-sedona__reason-header">
-									<h2 class="promo-sedona__reason-header--title">Небольшая площадь</h2>
-									<span class="promo-sedona__reason-header--num">№3</span>
-									<span class="promo-sedona__reason-header--descr">Все достопримечательностя находятся очень близко</span>
+							<li class="promo__resons-item">
+								<div class="promo__reason-header">
+									<h2 class="promo__reason-title">Красивая дорога</h2>
+									<span class="promo__reason-num">№4</span>
+									<span class="promo__reason-descr">Ехать в Седону из Лас-Вегаса совсем нескучно!</span>
 								</div>
 							</li>
-							<li class="promo-sedona__resons-item">
-								<div class="promo-sedona__reason-header">
-									<h2 class="promo-sedona__reason-header--title">Красивая дорога</h2>
-									<span class="promo-sedona__reason-header--num">№4</span>
-									<span class="promo-sedona__reason-header--descr">Ехать в Седону из Лас-Вегаса совсем нескучно!</span>
-								</div>
-							</li>
-							<li class="promo-sedona__resons-item">
-								<div class="promo-sedona__reason-header">
-									<h2 class="promo-sedona__reason-header--title">Мало туристов</h2>
-									<span class="promo-sedona__reason-header--num">№5</span>
-									<span class="promo-sedona__reason-header--descr">Большинство едет в Гранд Каньон и толпится там</span>
+							<li class="promo__resons-item">
+								<div class="promo__reason-header">
+									<h2 class="promo__reason-title">Мало туристов</h2>
+									<span class="promo__reason-num">№5</span>
+									<span class="promo__reason-header--descr">Большинство едет в Гранд Каньон и толпится там</span>
 								</div>
 							</li>
 						</ul>
-					</div>
 				</div>
 			</section>
 
@@ -125,3 +121,4 @@
 	<!-- <script src="js/script.js"></script> -->
 </body>
 </html>
+
