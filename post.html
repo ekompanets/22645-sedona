@@ -11,69 +11,74 @@
 	<div class="layout-center-wrapper">
 		<header class="page-header">
 			<nav class="main-nav">
+				<a href="#" class="main-nav__toggle"></a>
 				<ul class="main-nav__list">
-					<li><a href="">Карта штата</a></li>
-					<li><a href="" class="main-nav__item-active">Информация</a></li>
-					<li><a href="">Фото и видео</a></li>
-					<li><a href="">Гостиницы</a></li>
+					<li><a href="#" class="main-nav__close"></a></li>
+					<li class="main-nav__link"><a href="">Карта штата</a></li>
+					<li class="main-nav__link"><a href="" class="main-nav__active">Информация</a></li>
+					<li class="main-nav__link"><a href="">Фото и видео</a></li>
+					<li class="main-nav__link"><a href="">Гостиницы</a></li>
 				</ul>
-				<a href="#" class="main-nav__toggle  main-nav__toggle--close"></a>
-				<a href="#"><img src="#" class="main-nav__logo" alt="City of Sedona"></a>
-				<a href="#" class="main-nav__toggle  main-nav__toggle--open"></a>
+				<div  class="main-nav__logo">
+					<a class="main-nav__logo-link" href="index.html">
+						<img src="img/pic-logo-sedona.png" alt="City of Sedona">
+					</a>
+					
+				</div>
 			</nav>		
+			<div class="intro">
+	      <img class="intro__pic intro__pic-welcome" src="" alt="welcome">
+	      <img class="intro__pic intro__pic-tothegorgeous" src="" alt="to the gorgeous">
+	      <img class="intro__pic intro__pic-sedona" src="" alt="Sedona">
+	      <img class="intro__pic intro__pic-becausecanyon" src="" alt="because the Grand Canyon sucks!">
+	    </div>
 		</header>	
 
 
 		<main>
 			<!-- section.blog-post>.blog-post__inner>.blog-post__wrapper>(.blog__header>h1.blog__title+p.blog__descr)+(.post>(.post__publish>.post__date+.post__tag)+h1.post__title+.post__intro+sect.post__content) -->
-			<section class="blog-post">
-				<div class="blog-post__inner">
-					<div class="blog-post__wrapper">
-						<div class="blog__header">
-							<h1 class="blog__title">Блог шерифа</h1>
-							<p class="blog__descr">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах</p>
-						</div>
-						<div class="post">
-							<div class="post__publish">
-								<div class="post__date"><time datetime="2014-04-21">Позавчера</time></div>
-								<div class="post__tag"><a href="">Происшествия</a></div>
-							</div>
-							<h1 class="post__title">
-								Внимание! Сбежала моя домашняя анаконда
-							</h1>
-							<div class="post__intro">
-								Жители Седоны и гости города, будьте бдительны - сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.
-							</div>
-							<section class="post__content">
-								<h2>Предыстория</h2>
-								<p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик, и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал тогда: "Если доедет со мной до Седоны живой, так и быть, оставлю ее себе."</p>
-								<h2>Пропажа</h2>
-								<p>Неделю назад я вернулся домой из Канзаса и не нашет анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнол, что я и есть полиция, поэтому отправился на поиски сам. Особые приметы змеи:
-								<ul class="post-content__list-snake-signs">
-									<li>длина: 5метров</li>
-									<li>масса: 85 кг</li>
-									<li>окраска: серовато-зеленая</li>
-								</ul>
-								</p>
-								<p>Если вы увидите эту змею, сразу <span>звоните 911</span> и бегите со всех ног от нее!</p>
-								<h2>Предостережение</h2>
-								<p>Не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. Вот цитата, которая мне очень нравится:<br>
-									<span class="citation">Самый свирепый из зверей - теперь мы знаем - это человек, он убивает даже если не голоден.<br> <cite>Адриано Челентано</cite></span></p>
-							</section>
-						</div>
+			<section class="post__wrapper">
+				<div class="blog__header">
+					<h1 class="blog__title">Блог шерифа</h1>
+					<p class="blog__descr">Седона удивительный город! Горы здесь красного цвета, а местный шериф ведет блог и общается на форумах</p>
+				</div>
+				<div class="post">
+					<div class="blog__post-info">
+						<time class="blog__post-date" datetime="2014-04-21">Месяц назад</time>
+						<ul class="blog__post-tag">
+							<li><a href="">Еда</a></li>
+						</ul>
 					</div>
+					<h1 class="post__title">
+						Внимание! Сбежала моя домашняя анаконда
+					</h1> 
+					<div class="post__intro">
+						Жители Седоны и гости города, будьте бдительны - сбежала моя домашняя змея. Увидевшему срочно звонить 911 и бежать от нее подальше.
+					</div>
+						<h2>Предыстория</h2>
+						<p>В далеком 85-ом я подобрал эту змею на трассе. Ее переехал грузовик, и она валялась на обочине. Мне стало жаль ее и я решил взять ее с собой. Кинул в багажник пикапа и подумал тогда: "Если доедет со мной до Седоны живой, так и быть, оставлю ее себе."</p>
+						<h2>Пропажа</h2>
+						<p>Неделю назад я вернулся домой из Канзаса и не нашет анаконду дома. Обошел все 200 гектаров своего участка, но ее нигде нет. Решил сообщить в полицию, но вовремя вспомнол, что я и есть полиция, поэтому отправился на поиски сам. Особые приметы змеи:
+						<ul class="list">
+							<li>длина: 5метров</li>
+							<li>масса: 85 кг</li>
+							<li>окраска: серовато-зеленая</li>
+						</ul>
+						</p>
+						<p>Если вы увидите эту змею, сразу <span>звоните 911</span> и бегите со всех ног от нее!</p>
+						<h2>Предостережение</h2>
+						<p>Не пытайтесь убить змею, если увидите! Помните, что она тоже живое существо, хоть и выглядит не очень приятно. Вот цитата, которая мне очень нравится:<br>
+							<span class="citation">Самый свирепый из зверей - теперь мы знаем - это человек, он убивает даже если не голоден.<br> <cite>Адриано Челентано</cite></span></p>
 				</div>
 			</section>
 
 
 
-			<div class="blog-post__pagination">
-				<ul>
-					<li><a href="#">Пред.</a></li>
-					<li><a href="#">След.</a></li>
-					<li><a href="#">Назад к списку</a></li>
-				</ul>
-			</div>
+			<ul class="prev-next">
+				<li><a href="#">Пред.</a></li>
+				<li><a href="#">След.</a></li>
+				<li><a href="#">Назад к списку</a></li>
+			</ul>
 			
 		</main>
 		

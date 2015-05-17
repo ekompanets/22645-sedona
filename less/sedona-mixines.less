@@ -1,0 +1,16 @@
+.marg-pad(@mar-t-b: 0; @mar-l-r: 0; @pad-t-b: 0; @pad-l-r: 0;) {
+	margin: @mar-t-b @mar-l-r;
+	padding: @pad-t-b @pad-l-r;
+}
+
+.destroy-list() {
+  list-style: none;
+  .marg-pad();
+}
+
+.set-pad-lr(@pad-lr: @padding-value;) {		//20px
+	padding-left: @pad-lr;
+	padding-right: @pad-lr;
+}
+
+

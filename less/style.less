@@ -1,30 +1,69 @@
-@color: #fff;
-@bg-color: #000;
-@wrap-width: 300px;
+@import url("sedona-variables.less");
+@import url("sedona-mixines.less");
+@import url("sedona-header.less");
+@import url("sedona-promo.less");
+@import url("sedona-hotel-search.less");
+@import url("sedona-footer.less");
+
 
 html, body {
   height: 100%;
-  width: 100%;
+  // width: 100%;
+  width: 320px;
   margin: 0;
   padding: 0;
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: 400;
+  color: @color-text--dark;
+  background-color: @bg-body;
+  text-transform: uppercase;
 }
 
-body {
-  background-color: @bg-color;
-  color: @color;
+*, *:after,
+*:before {
+  box-sizing: border-box;
 }
 
-.page-header {
-  &__logo-wrap {
-    width: @wrap-width;
-    height: @wrap-width/2;
-    margin: @wrap-width/4 auto 0;
-    text-align: center;
+h1,h2,h3 {
+  .marg-pad();
+}
+
+a {
+  text-decoration: none;
+}
+.layout-center-wrapper {
+  text-align: center;
+}
+
+// @media (max-width: 767px) {
+//   .layout-center-wrapper {
+//     max-width: 767px
+//   }
+// }
+
+
+
+.intro {
+  background: url("../img/pic-bg.jpg") no-repeat 100% 100%;
+  background-size: 100% 100%;
+  background-position : bottom;
+  min-height: 512px;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: @bg-pic__white-mask no-repeat;
+    background-size: 100% 100%;
   }
-
-  &__logo-link {
-    color: @color;
-    font-size: 28px;
-    font-weight: bold;
-  }
 }
+
+.map {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+
+
+

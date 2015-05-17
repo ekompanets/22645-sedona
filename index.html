@@ -3,85 +3,93 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>HTML Academy: Sedona</title>
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<title>HTML Academy: Sedona</title>	
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div class="layout-center-wrapper">
+		
 		<header class="page-header">
 			<nav class="main-nav">
+				<a href="#" class="main-nav__toggle"></a>
 				<ul class="main-nav__list">
-					<li><a href="">Карта штата</a></li>
-					<li><a href="" class="main-nav__item-active">Информация</a></li>
-					<li><a href="">Фото и видео</a></li>
-					<li><a href="">Гостиницы</a></li>
+					<li><a href="#" class="main-nav__close"></a></li>
+					<li class="main-nav__link"><a href="">Карта штата</a></li>
+					<li class="main-nav__link"><a href="" class="main-nav__active">Информация</a></li>
+					<li class="main-nav__link"><a href="">Фото и видео</a></li>
+					<li class="main-nav__link"><a href="">Гостиницы</a></li>
 				</ul>
-				<a href="#" class="main-nav__toggle  main-nav__toggle--close"></a>
-				<a href="#"><img src="#" class="main-nav__logo" alt="City of Sedona"></a>
-				<a href="#" class="main-nav__toggle  main-nav__toggle--open"></a>
+				<div  class="main-nav__logo">
+					<a class="main-nav__logo-link" href="index.html">
+						<img src="img/pic-logo-sedona.png" alt="City of Sedona">
+					</a>
+					
+				</div>
 			</nav>		
+			<div class="intro">
+	      <img class="intro__pic intro__pic-welcome" src="" alt="welcome">
+	      <img class="intro__pic intro__pic-tothegorgeous" src="" alt="to the gorgeous">
+	      <img class="intro__pic intro__pic-sedona" src="" alt="Sedona">
+	      <img class="intro__pic intro__pic-becausecanyon" src="" alt="because the Grand Canyon sucks!">
+	    </div>
 		</header>	
 		
 
 
 		<main>
 			<section class="promo">	
-				<!-- .promo__inner>.promo__wrapper>(.promo__small-town>(h1.promo__title+p.promo__descr))+ul.promo__reasons>li*5 -->
-				<div class="promo__inner">
+				<div class="promo__wrapper">
 						<header class="promo__header">
 							<h1 class="promo__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
 							<p class="promo__descr">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 						</header>
-						<ul class="promo__reasons">
-							<li class="">
-								<!-- (.promo__reason-header>h2.promo__reason-header--title+span.promo__reason-header--num+span.promo__reason-header--descr)+.promo__reason-content>(.promo__reason-content--house>p+span)+(.promo__reason-content--gift>p+span)+(.promo__reason-content--food>p+span) -->
-								<div class="promo__reason-header">
+						<ul class="promo__reason-list">
+							<li class="promo__reason promo__reason--pictured">
+								<div class="promo__reason-header">	
 									<h2 class="promo__reason-title">Настоящий городок</h2>
-									<span class="promo__reason-num">№1</span>
-									<span class="promo__reason-descr">Седона не аттракцион для туристов, там течет своя жизнь</span>
+									<div class="promo__reason-descr">Седона не аттракцион для туристов, там течет своя жизнь</div>
 								</div>
+								<img class="promo__reason-picture" src="img/pic-town.jpg">
 								<ul class="promo__reason-content">
-									<li>
-										<h3 class="promo__subreason-house">Жилье</h3>
-										<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+									<li class="promo__subreason promo__subreason-house">
+										<h3 class="promo__subreason-title">Жилье</h3>
+										<p class="promo__subreason-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 									</li>
-									<li>
-										<h3 class="promo__subreason-gift">Сувениры</h3>
-										<p>Не только китайского, но и местного производства!</p>
+									<li class="promo__subreason promo__subreason-gift">
+										<h3 class="promo__subreason-title">Сувениры</h3>
+										<p class="promo__subreason-text">Не только китайского, но и местного производства!</p>
 									</li>
-									<li>
-										<h3 class="promo__subreason-food">Еда</h3>
-										<p>Всегда заказывайте фирменный бургер,вы не разочаруетесь!</p>
+									<li class="promo__subreason promo__subreason-food">
+										<h3 class="promo__subreason-title">Еда</h3>
+										<p class="promo__subreason-text">Всегда заказывайте фирменный бургер,вы не разочаруетесь!</p>
 									</li>
 								</ul>
 							</li>
-							<li class="promo__resons-item">
+							<li class="promo__reason promo__reason--pictured">
 								<div class="promo__reason-header">
 									<h2 class="promo__reason-title">Там есть мост Дьявола</h2>
-									<span class="promo__reason-num">№2</span>
-									<span class="promo__reason-descr">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+									<div class="promo__reason-descr">Да, по нему можно пройти! Если конечно вы осмелитесь</div>
 								</div>
+								<img class="promo__reason-picture" src="img/pic-bridge.jpg">
 							</li>
-							<li class="promo__resons-item">
+							<li class="promo__reason promo__reason--color">
 								<div class="promo__reason-header">
 									<h2 class="promo__reason-title">Небольшая площадь</h2>
-									<span class="promo__reason-num">№3</span>
-									<span class="promo__reason-descr">Все достопримечательностя находятся очень близко</span>
+									<div class="promo__reason-descr">Все достопримечательности находятся очень близко</div>
 								</div>
 							</li>
-							<li class="promo__resons-item">
+							<li class="promo__reason promo__reason--color">
 								<div class="promo__reason-header">
 									<h2 class="promo__reason-title">Красивая дорога</h2>
-									<span class="promo__reason-num">№4</span>
-									<span class="promo__reason-descr">Ехать в Седону из Лас-Вегаса совсем нескучно!</span>
-								</div>
+									<div class="promo__reason-descr">Ехать в Седону из Лас-Вегаса совсем нескучно!</div>
+								</div
 							</li>
-							<li class="promo__resons-item">
+							<li class="promo__reason promo__reason--color">
 								<div class="promo__reason-header">
 									<h2 class="promo__reason-title">Мало туристов</h2>
-									<span class="promo__reason-num">№5</span>
-									<span class="promo__reason-header--descr">Большинство едет в Гранд Каньон и толпится там</span>
+									<div class="promo__reason-descr">Большинство едет в Гранд Каньон и толпится там</div>
 								</div>
 							</li>
 						</ul>
@@ -91,31 +99,34 @@
 
 
 			<section class="hotel-search">
-				<div class="hotel-search__inner">
+				<div class="hotel-search__wrapper">
 					<div class="hotel-search__header">
 						<h1>Заинтересовались?</h1>
-						<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиницв Седоне</p>
-						<a href="" class="hotel-search__link">Найти гостиницу</a>
+						<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+						
 					</div>
+					<a href="" class="hotel-search__link">Найти гостиницу</a>
 					<div class="hotel-search__form">
 						
 					</div>
-				</div>	
-				<div class="map"></div>			
+				</div>					
+				<iframe class="map" src="https://www.google.com/maps/d/embed?mid=zmAZU3I8UNK8.kYZXHDO8u1eU"></iframe>
+
 			</section>
 		</main>	
 
 
 
-		<footer class="page-footer">		
-			<div class="hash-tag"><a href="">#visitsedona</a></div>
-			<div class="social-btns">
-	            <a href="#" class="social-btns__icon-tw">Мы в Twitter</a>
-	            <a href="#" class="social-btns__icon-fb">Мы в Facebook</a>
-	            <a href="#" class="social-btns__icon-youtube">Мы в Youtube</a>
-	        </div>
-	        <div class="page-footer__designer">Разработано <a href=""><img src="" >HTMLAcademy</a></div>
-
+		<footer class="page-footer">	
+			<div class="page-footer-wrapper">
+				<div class="hash-tag"><a class="hash-tag__link" href="">#visitsedona</a></div>
+				<div class="social-btns">
+	        <a href="#" class="social-btns__icon social-btns__icon-tw">Tw</a>
+	        <a href="#" class="social-btns__icon social-btns__icon-fb">Fb</a>
+	        <a href="#" class="social-btns__icon social-btns__icon-youtube">YT</a>
+	    	</div>
+	    	<div class="page-footer__designer"><a class="page-footer__designer-link" href="">Разработано </a></div>
+	    </div>	
 		</footer>
 	</div>	
 	<!-- <script src="js/script.js"></script> -->
