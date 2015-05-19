@@ -527,7 +527,7 @@ a {
 }
 .layout-center-wrapper {
   text-align: center;
-  width: 320px;
+  margin: 0 auto;
 }
 .intro {
   background: url("../img/pic-bg.jpg") no-repeat 100% 100%;
