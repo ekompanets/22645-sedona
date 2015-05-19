@@ -1,156 +1,172 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: sedona</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <title>HTML Academy: Sedona</title>  
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	<header class="page-header">
-		<nav class="main-nav">
-			<ul class="main-nav__list">
-				<li><a href="">Карта штата</a></li>
-				<li><a href="" class="main-nav__item-active">Информация</a></li>
-				<li><a href="">Фото и видео</a></li>
-				<li><a href="">Гостиницы</a></li>
-			</ul>
-			<a href="#" class="main-nav__toggle"></a>
-			<a href="#"><img src="#" class="main-nav__logo" alt="City of Sedona"></a>
-			<a href="#" class="main-nav__toggle  main-nav__toggle--open"></a>
-		</nav>		
-	</header>	
-
-
-
-	<div class="intro">		
-		<div class="text-middle">Sedona</div>
-	</div>
-
-
-
-	<main>
-		<div class="main-intro">
-			<h1 >Оставьте свой отзыв</h1>
-			<span >Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</span>
-		</div>
-
-		<form action="#" method="post" enctype="multipart/form-data">
-			<div class="main-section  personal-data">
-				<h2>Представьтесь, пожалуйста</h2>
-
-				<label for="lastname">Фамилия:<span>*</span></label>
-				<input type="text" id="lastname" name="lastname" placeholder="Иванов">
-			
-			
-				<label for="firstname">Имя:<span>*</span></label>
-				<input type="text" id="firstname" name="firstname" placeholder="Петр">
-			 				
-			
-				<label for="middlename">Отчество:</label>
-				<input type="text" id="middlename" name="middlename" placeholder="Александрович">
-			
- 			</div>
-
- 			<div class="main-section  impression">
- 				<h2>Ваше впечатление:</h2>
- 				<label><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
- 				<label><input type="radio" name="impression" value="negative" >Скорее отрицательное</label>
-
- 			</div>
-
- 			<div class="main-section  dates">
- 				<h2>Даты вашей поездки:</h2>
- 				<label for="date-arrival">Дата приезда:<span>*</span></label>
-				<input type="text" id="date-arrival" name="date-arrival" placeholder="4 июля 2015">
-
-				<label for="length-of-stay">Длительность пребывания:<span>*</span></label>
-				<input type="text" id="length-of-stay" name="length-of-stay" placeholder="14 дн.">
-
-				<label for="date-departure">Дата отъезда:<span>*</span></label>
-				<input type="text" id="date-departure" name="date-departure" placeholder="28 июля 2015">
-			 		
- 			</div>
-			
-			<div class="main-section  travelers">
-				<h2>Кол-во путешественников:</h2>
-				<div class="traveler">
-					<label for="num1">№</label>
-					<input type="text" id="num1" name="num1" placeholder="1">
-				
-					<label for="l-name1">Фамилия:<span>*</span></label>
-					<input type="text" id="l-name1" name="l-name1" placeholder="Иванов">
-				
-				
-					<label for="f-name1">Имя:<span>*</span></label>
-					<input type="text" id="f-name1" name="f-name1" placeholder="Петр">
-				 				
-				
-					<label for="mid-name1">Отчество:</label>
-					<input type="text" id="mid-name1" name="mid-name1" placeholder="Александрович">
-	 			</div>
-
-	 			<div class="traveler">
-					<label for="num2">№</label>
-					<input type="text" id="num2" name="num2" placeholder="2">
-				
-					<label for="l-name2">Фамилия:<span>*</span></label>
-					<input type="text" id="l-name2" name="l-name2" placeholder="Иванов">
-				
-				
-					<label for="f-name2">Имя:<span>*</span></label>
-					<input type="text" id="f-name2" name="f-name2" placeholder="Петр">
-				 				
-				
-					<label for="mid-name2">Отчество:</label>
-					<input type="text" id="mid-name2" name="mid-name2" placeholder="Александрович">
-	 			</div>
-			</div>
-
-			<div class="main-section  visited-places">
- 				<h2>Посещенные достопримечательности:</h2>
- 				<label><input type="checkbox" name="bridge" checked>Мост Дьявола</label>
- 				<label><input type="checkbox" name="park" >Слайд-Парк</label>
- 				<label><input type="checkbox" name="bell" checked>Гора-Колокол</label>
- 				<label><input type="checkbox" name="rock" checked>Красные скалы</label>
-
- 			</div>
-
-			<div class="main-section  photos">
-				<h2>Загрузите фотографии:</h2>
-				<!-- <input type="file" name="photofile" value="Выбрать фотографии"> -->
-				<a href="#" >Выбрать фотографии</a>	
-				<div class="downloaded-photos">
-					<img src="" alt="">
-					<img src="" alt="">
-					<img src="" alt="">
-					<img src="" alt="">
-					<img src="" alt="">
-					<img src="" alt="">
-					<img src="" alt="">
-				</div>
-			</div>
-
-			<input type="submit" value="Отправить отзыв">
-		</form>	
-		
-	</main>
-	
-
-	
-	<footer class="main-footer">		
-		<div class="hash-tag"><a href="">#visitsedona</a></div>
-		<div class="social-btns">
-            <a href="#" class="icon-tw"></a>
-            <a href="#" class="icon-fb"></a>
-            <a href="#" class="icon-youtube"></a>
+  <div class="layout-center-wrapper">
+    <header class="page-header">
+      <nav class="main-nav">
+        <a href="#" class="main-nav__toggle"></a>
+        <ul class="main-nav__list">
+          <li><a href="#" class="main-nav__close"></a></li>
+          <li class="main-nav__link"><a href="">Карта штата</a></li>
+          <li class="main-nav__link"><a href="" class="main-nav__active">Информация</a></li>
+          <li class="main-nav__link"><a href="">Фото и видео</a></li>
+          <li class="main-nav__link"><a href="">Гостиницы</a></li>
+        </ul>
+        <div  class="main-nav__logo">
+          <a class="main-nav__logo-link" href="index.html">
+            <img src="img/pic-logo-sedona.png" alt="City of Sedona">
+          </a>
+          
         </div>
-        <!-- В psd только этой страницы нет следующей строки. -->
-        <div class="developed">Разработано<a href=""><img src="" alt="HTMLAcademy"></a></div>
+      </nav>    
+      <div class="intro">
+        <img class="intro__pic intro__pic-welcome" src="" alt="welcome">
+      </div>
+    </header>  
 
-	</footer>
 
+
+  <!-- <div class="intro">   
+    <div class="text-middle">Sedona</div>
+  </div> -->
+
+
+
+    <main>
+      <header class="form__header content-header">
+        <h1 class="form__title">Оставьте свой отзыв</h1>
+        <p class="form__descr">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+      </header>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset class="form__set form__set-personal-data">
+          <h2 class="form__set-title">Представьтесь, пожалуйста</h2>
+
+          <label class="form__label">Фамилия:<span class="marker-required">*</span>
+          <input class="form__input form__input--wide" type="text" name="lastname" placeholder="Иванов"></label>
+        
+        
+          <label class="form__label">Имя:<span class="marker-required">*</span>
+          <input class="form__input form__input--wide" type="text" name="firstname" placeholder="Петр"></label>
+                
+        
+          <label class="form__label">Отчество:
+          <input class="form__input form__input--wide" type="text" name="middlename" placeholder="Александрович"></label>
+        
+        </fieldset>
+
+        <fieldset class="form__set form__set-impression">
+          <h2 class="form__set-title">Ваше впечатление:</h2>
+          <label class="form__label form__label--bold"><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
+          <label class="form__label form__label--bold"><input type="radio" name="impression" value="negative" >Скорее отрицательное</label>
+
+        </fieldset>
+
+        <fieldset class="form__set form__set-dates">
+          <h2 class="form__set-title">Даты вашей поездки:</h2>
+          <label class="form__label">Дата приезда:<span class="marker-required">*</span>
+          <input type="text" name="date-arrival" placeholder="4 июля 2015"></label>
+
+          <label class="form__label">Длительность пребывания:<span class="marker-required">*</span>
+          <input type="number" name="day-number" placeholder="14"> 
+          <div class="form__input form__num-text">дн.</div></label>
+
+          <label class="form__label">Дата отъезда:<span class="marker-required">*</span>
+          <input type="text" name="date-departure" placeholder="28 июля 2015"></label>
+            
+        </fieldset>
+        
+        <fieldset class="form__set form__set-travelers">
+          <h2 class="form__set-title">Кол-во путешественников:</h2>
+          <div class="form__counter">
+            <button class="form__count-btn form__count-btn--minus ib"></button>
+            <input class="form__input form__input--counter ib" type="text" name="people-count"  value="0" data-min="1">
+            <div class="form__input form__num-text ib">чел.</div></label>
+            <button class="form__count-btn form__count-btn--plus ib"></button>
+          </div>
+
+          <ol class="form__set-travelers-list">
+            <li class="traveler">
+              <label class="form__label">№
+              <input type="text" name="num1" placeholder="1"></label>
+            
+              <label class="form__label">Фамилия:<span class="marker-required">*</span>
+              <input type="text" name="l-name1" placeholder="Иванов"></label>          
+            
+              <label class="form__label">Имя:<span class="marker-required">*</span>
+              <input type="text" name="f-name1" placeholder="Петр"></label>
+            
+              <label class="form__label">Отчество:
+              <input type="text" name="mid-name1" placeholder="Александрович"></label>
+            </li>
+
+            <li class="traveler">
+              <label class="form__label">№
+              <input type="text" id="num2" name="num2" placeholder="2"></label>
+            
+              <label class="form__label">Фамилия:<span class="marker-required">*</span>
+              <input type="text" name="l-name1" placeholder="Иванов"></label>          
+            
+              <label class="form__label">Имя:<span class="marker-required">*</span>
+              <input type="text" name="f-name1" placeholder="Петр"></label>    
+              <label class="form__label">Отчество:
+              <input type="text" name="mid-name1" placeholder="Александрович"></label>
+            </li>
+          <ol>
+        </fieldset>
+
+        <fieldset class="form__set form__set-visited-places">
+          <h2 class="form__set-title">Посещенные достопримечательности:</h2>
+          <label class="form__label form__label--bold"><input type="checkbox" name="bridge" checked>Мост Дьявола</label>
+          <label class="form__label form__label--bold"><input type="checkbox" name="park" >Слайд-Парк</label>
+          <label class="form__label form__label--bold"><input type="checkbox" name="bell" checked>Гора-Колокол</label>
+          <label class="form__label form__label--bold"><input type="checkbox" name="rock" checked>Красные скалы</label>
+
+        </fieldset>
+
+        <fieldset class="form__set form__set-photos">
+          <h2 class="form__set-title">Загрузите фотографии:</h2>
+          <!-- <input type="file" name="photofile" value="Выбрать фотографии"> -->
+          <a href="#" >Выбрать фотографии</a> 
+          <div class="downloaded-photos">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+          </div>
+        </fieldset>
+
+        <input type="submit" value="Отправить отзыв">
+      </form> 
+      
+    </main>
+    
+
+    
+    <footer class="page-footer">  
+      <div class="page-footer-wrapper">
+        <div class="page-footer__hash-tag  page-footer__flex"><a class="hash-tag__link" href="">#visitsedona</a></div>
+        <div class="page-footer_social-btns  page-footer__flex">
+          <a href="#" class="social-btns__icon social-btns__icon-tw">Tw</a>
+          <a href="#" class="social-btns__icon social-btns__icon-fb">Fb</a>
+          <a href="#" class="social-btns__icon social-btns__icon-youtube">YT</a>
+        </div>
+        <div class="page-footer__designer  page-footer__flex"><a class="page-footer__designer-link" href="">Разработано </a></div>
+      </div>  
+    </footer>
+
+  </div>
   
 
 </body>

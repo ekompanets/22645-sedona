@@ -7,15 +7,16 @@
 
   &__title {
     .marg-pad(@pad-l-r: 10px);
-    margin-bottom: 27px;
+    margin-bottom: 27px;           //  ?
     font-size: @font-size-middle; 
-    line-height: 26px;   
+    line-height: @line-height-large; 
+    font-weight: @font-weight-bold;  
   }
 
   &__descr {
     .marg-pad();
     font-size: @font-size;    
-    line-height: 26px;       
+    line-height: @line-height-large;       
   }
 
   &__reason-list {
@@ -52,16 +53,17 @@
       position: absolute;
       bottom: 0;
       // z-index: 10000;
-      margin: 0 @padding-value;
+      margin: 0 @padding-default;
       width: (280 / 320 * 100%);
       min-height: 1px;
-      background: #d6d6d6; 
+      background: @color-line-separator; 
     }
 
   &__reason-title {    
     padding-bottom: 45px;
     font-size: @font-size-middle;
-    line-height: @line-height-middle;
+    line-height: @line-height-large;
+    font-weight: @font-weight-bold;
   } 
 
   &__reason-descr {    
@@ -108,7 +110,8 @@
   &__subreason {
     &-title {
       font-size: @font-size-middle;
-      line-height: @line-height-middle;
+      line-height: @line-height-large;
+      font-weight: @font-weight-bold;
       text-align: left;
     }
     

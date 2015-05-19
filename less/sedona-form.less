@@ -1,0 +1,102 @@
+.form {
+  &__header {
+    .set-pad-lr();
+  }
+
+  &__title {
+    .marg-pad();
+    margin-bottom: 27px;           
+    font-size: @font-size-middle; 
+    line-height: @line-height-large; 
+    font-weight: @font-weight-bold; 
+  }
+
+  &__descr {
+    .marg-pad();
+    font-size: @font-size;    
+    line-height: 24px;       
+  }
+
+  &__set {
+
+    border: none;
+    border-top: 1px solid @color-line-separator;    
+    text-align: left;
+
+    &-title {      
+    .marg-pad();       
+    font-size: @font-size-middle; 
+    line-height: @line-height-large; 
+    }
+  }
+
+  &__label {    
+    padding-left: 20px;
+    font-size: @font-size; 
+    line-height: @line-height-large; 
+    &--bold {
+      text-transform: none;       
+      font-size: @font-size-middle; 
+      line-height: @line-height-large; 
+      font-weight: @font-weight-bold;
+    }
+  }
+
+  &__input{
+    display: inline-block;
+    padding: 18px 22px;
+    color: #000;
+    background: #f2f2f2;
+    text-transform: none;       
+    font-size: @font-size-middle; 
+    line-height: @line-height-large; 
+    font-weight: @font-weight-bold;  
+    box-shadow: none;
+    border: none;
+    border: 1px solid #f2f2f2;
+    &--wide {   
+      width: 100%;      
+    }
+    &--counter {
+      width: 55px;
+    }
+  }
+
+  &__counter {
+    font-size: 0;
+  }
+
+  &__count-btn {
+    display: inline-block;
+    width: 61px;
+    height: 61px;
+    background-color: #f2f2f2;
+    border: none;
+    box-shadow: none;
+    font-size: 0;
+    &--plus {
+      background-image: url(../img/icon-plus.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--minus {
+      background-image: url(../img/icon-minus.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__num-text {
+    width: 90px;
+  }
+
+
+
+}
+
+.marker-required {
+  color: @color-text-required;
+}
+.ib {
+  vertical-align: top;
+}

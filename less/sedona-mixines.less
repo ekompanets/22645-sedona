@@ -8,7 +8,12 @@
   .marg-pad();
 }
 
-.set-pad-lr(@pad-lr: @padding-value;) {		//20px
+.destroy-link() {
+  text-decoration: none;
+  color: @color-text--dark;
+}
+
+.set-pad-lr(@pad-lr: @padding-default;) {		//20px
 	padding-left: @pad-lr;
 	padding-right: @pad-lr;
 }
