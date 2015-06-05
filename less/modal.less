@@ -1,0 +1,73 @@
+.success-popup,
+.failure-popup {
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  // height: 315px;
+  margin-left: -325px;
+  margin-top: -205px;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 0 15px -1px #000;
+
+  &__msg {
+    background: #fff;
+    padding: 0 100px;
+    padding-top: 50px;    
+  }
+
+  &__msg-title {
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: @font-size-huge;
+    line-height: 1em;
+  }
+
+  &__msg-text {
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: @font-size;
+    line-height: 24/14em;
+  }
+
+  &__btn {
+    padding: 40px 90px;
+    background: @color-gray--light;
+  }
+
+  
+}
+
+.popup-show {
+    display: block;
+  }
+
+.failure-popup {
+  width: 400px;
+  margin-left: -200px;
+  margin-top: -205px;
+  z-index: 9998;
+
+  &__msg {
+    padding-left: 60px; 
+    padding-right: 60px;
+  }
+
+  &__msg-title {
+    padding-left: 30px; 
+    padding-right: 30px;
+  }
+
+  &__msg-text {
+    padding: 0;
+  }
+
+  &__btn {
+    padding: 30px 60px 50px;
+    background: none;
+  }
+
+}

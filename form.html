@@ -5,169 +5,277 @@
   <meta charset="utf-8">
   <title>HTML Academy: Sedona</title>  
   <link rel="stylesheet" href="css/style.css">
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
   <div class="layout-center-wrapper">
-    <header class="page-header">
+    <header class="page-header">    
+
       <nav class="main-nav">
-        <a href="#" class="main-nav__toggle"></a>
         <ul class="main-nav__list">
-          <li><a href="#" class="main-nav__close"></a></li>
           <li class="main-nav__link"><a href="">Карта штата</a></li>
           <li class="main-nav__link"><a href="" class="main-nav__active">Информация</a></li>
           <li class="main-nav__link"><a href="">Фото и видео</a></li>
           <li class="main-nav__link"><a href="">Гостиницы</a></li>
         </ul>
-        <div  class="main-nav__logo">
-          <a class="main-nav__logo-link" href="index.html">
-            <img src="img/pic-logo-sedona.png" alt="City of Sedona">
-          </a>
-          
+        <a href="#" class="main-nav__close"></a>
+      </nav> 
+
+      <div  class="logo">
+        <a class="logo__link" href="index.html">
+          <img src="img/logo-sedona@1x.png" alt="City of Sedona"
+                srcset="img/logo-sedona@2x.png 2x,
+                        img/logo-sedona@3x.png 3x">
+        </a> 
+        <a href="#" class="toggle"></a>          
+      </div>  
+      
+
+      <div class="bg-sedona bg-sedona--small">
+        <div>
+          <p class="bg-sedona__text bg-sedona__text--welcome">Welcome</p>
+          <p class="bg-sedona__text bg-sedona__text--gorgeous">to the gorgeous</p>
         </div>
-      </nav>    
-      <div class="intro">
-        <img class="intro__pic intro__pic-welcome" src="" alt="welcome">
+        <p class="bg-sedona__text bg-sedona__text--sedona">Sedona</p>
+        <p class="bg-sedona__text bg-sedona__text--because">"Because The Grand Canyon sucks!"</p>
       </div>
-    </header>  
 
-
-
-  <!-- <div class="intro">   
-    <div class="text-middle">Sedona</div>
-  </div> -->
+    </header>   
 
 
 
     <main>
-      <header class="form__header content-header">
-        <h1 class="form__title">Оставьте свой отзыв</h1>
-        <p class="form__descr">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-      </header>
 
-      <form action="#" method="post" enctype="multipart/form-data">
-        <fieldset class="form__set form__set-personal-data">
-          <h2 class="form__set-title">Представьтесь, пожалуйста</h2>
+      <div class="comment">
+        <header class="comment__header">
+          <h1 class="comment__title">Оставьте свой отзыв</h1>
+          <p class="comment__descr">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </header>
+        
+        <form class="comment__form" action="#" method="post" enctype="multipart/form-data">
 
-          <label class="form__label">Фамилия:<span class="marker-required">*</span>
-          <input class="form__input form__input--wide" type="text" name="lastname" placeholder="Иванов"></label>
-        
-        
-          <label class="form__label">Имя:<span class="marker-required">*</span>
-          <input class="form__input form__input--wide" type="text" name="firstname" placeholder="Петр"></label>
+          <div class="comment__wrap">
+            <fieldset class="comment__set">
+              <legend class="comment__set-legend">Представьтесь, пожалуйста</legend>                    
+              <div class="comment__flex-wrap">
+                <div class="comment__block">
+                  <label class="comment__label">Фамилия:<span class="marker-required">*</span></label>
+                  <input class="comment__input" type="text" name="lastname" placeholder="Иванов">
+                </div>                       
+                            
+                <div class="comment__block">
+                  <label class="comment__label">Имя:<span class="marker-required">*</span></label>     
+                  <input class="comment__input" type="text" name="firstname" placeholder="Петр">  
+                </div>
                 
-        
-          <label class="form__label">Отчество:
-          <input class="form__input form__input--wide" type="text" name="middlename" placeholder="Александрович"></label>
-        
-        </fieldset>
-
-        <fieldset class="form__set form__set-impression">
-          <h2 class="form__set-title">Ваше впечатление:</h2>
-          <label class="form__label form__label--bold"><input type="radio" name="impression" value="positive" checked>Скорее положительное</label>
-          <label class="form__label form__label--bold"><input type="radio" name="impression" value="negative" >Скорее отрицательное</label>
-
-        </fieldset>
-
-        <fieldset class="form__set form__set-dates">
-          <h2 class="form__set-title">Даты вашей поездки:</h2>
-          <label class="form__label">Дата приезда:<span class="marker-required">*</span>
-          <input type="text" name="date-arrival" placeholder="4 июля 2015"></label>
-
-          <label class="form__label">Длительность пребывания:<span class="marker-required">*</span>
-          <input type="number" name="day-number" placeholder="14"> 
-          <div class="form__input form__num-text">дн.</div></label>
-
-          <label class="form__label">Дата отъезда:<span class="marker-required">*</span>
-          <input type="text" name="date-departure" placeholder="28 июля 2015"></label>
-            
-        </fieldset>
-        
-        <fieldset class="form__set form__set-travelers">
-          <h2 class="form__set-title">Кол-во путешественников:</h2>
-          <div class="form__counter">
-            <button class="form__count-btn form__count-btn--minus ib"></button>
-            <input class="form__input form__input--counter ib" type="text" name="people-count"  value="0" data-min="1">
-            <div class="form__input form__num-text ib">чел.</div></label>
-            <button class="form__count-btn form__count-btn--plus ib"></button>
+                <div class="comment__block">
+                  <label class="comment__label">Отчество:</label>
+                  <input class="comment__input" type="text" name="middlename" placeholder="Александрович">
+                </div>
+              </div>
+            </fieldset>
           </div>
-
-          <ol class="form__set-travelers-list">
-            <li class="traveler">
-              <label class="form__label">№
-              <input type="text" name="num1" placeholder="1"></label>
-            
-              <label class="form__label">Фамилия:<span class="marker-required">*</span>
-              <input type="text" name="l-name1" placeholder="Иванов"></label>          
-            
-              <label class="form__label">Имя:<span class="marker-required">*</span>
-              <input type="text" name="f-name1" placeholder="Петр"></label>
-            
-              <label class="form__label">Отчество:
-              <input type="text" name="mid-name1" placeholder="Александрович"></label>
-            </li>
-
-            <li class="traveler">
-              <label class="form__label">№
-              <input type="text" id="num2" name="num2" placeholder="2"></label>
-            
-              <label class="form__label">Фамилия:<span class="marker-required">*</span>
-              <input type="text" name="l-name1" placeholder="Иванов"></label>          
-            
-              <label class="form__label">Имя:<span class="marker-required">*</span>
-              <input type="text" name="f-name1" placeholder="Петр"></label>    
-              <label class="form__label">Отчество:
-              <input type="text" name="mid-name1" placeholder="Александрович"></label>
-            </li>
-          <ol>
-        </fieldset>
-
-        <fieldset class="form__set form__set-visited-places">
-          <h2 class="form__set-title">Посещенные достопримечательности:</h2>
-          <label class="form__label form__label--bold"><input type="checkbox" name="bridge" checked>Мост Дьявола</label>
-          <label class="form__label form__label--bold"><input type="checkbox" name="park" >Слайд-Парк</label>
-          <label class="form__label form__label--bold"><input type="checkbox" name="bell" checked>Гора-Колокол</label>
-          <label class="form__label form__label--bold"><input type="checkbox" name="rock" checked>Красные скалы</label>
-
-        </fieldset>
-
-        <fieldset class="form__set form__set-photos">
-          <h2 class="form__set-title">Загрузите фотографии:</h2>
-          <!-- <input type="file" name="photofile" value="Выбрать фотографии"> -->
-          <a href="#" >Выбрать фотографии</a> 
-          <div class="downloaded-photos">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+                  
+          <div class="comment__wrap">
+            <fieldset class="comment__set">
+              <legend class="comment__set-legend">Ваше впечатление:</legend>
+                <div class="comment__flex-wrap">
+                  <div class="comment__block comment__block--radio">
+                    <input class="comment__radio" type="radio" id="radio-plus" name="impression" value="positive" checked>
+                    <label class="comment__label comment__label--btn comment__label--radio" for="radio-plus">Скорее положительное</label>
+                  </div>
+                  
+                  <div class="comment__block comment__block--radio">
+                    <input class="comment__radio" type="radio" id="radio-minus" name="impression" value="negative">
+                    <label class="comment__label comment__label--btn comment__label--radio" for="radio-minus">Скорее отрицательное</label>
+                  </div>     
+                </div>
+            </fieldset>
           </div>
-        </fieldset>
-
-        <input type="submit" value="Отправить отзыв">
-      </form> 
+                  
+          <div class="comment__wrap">
+            <fieldset class="comment__set">
+              <legend class="comment__set-legend">Даты вашей поездки:</legend>
+              <div class="comment__flex-wrap">
+                <div class="comment__block">
+                  <label class="comment__label">Дата приезда:<span class="marker-required">*</span></label>
+                  <input class="comment__input" id="first-date" type="date" name="date-arrival" placeholder="4 июля 2015">
+                </div>
+                      
+                <div class="comment__block">
+                  <label class="comment__label"><span class="comment__label-long">Длительность</span><span class="comment__label-short">Дней</span> пребывания:<span class="marker-required">*</span></label>
+                  <div class="input-numeric input-numeric--date">
+                    <span class="input-numeric__icon-minus">Минус</span>
+                    <input class="input-numeric__text" type="number" min="1" max="99" id="length-of-stay" name="length-of-stay"  value="5" disabled>
+                    <span class="input-numeric__label">дн.</span>
+                    <span class="input-numeric__icon-plus">Плюс</span>
+                  </div>
+                </div>
+                      
+                <div class="comment__block">
+                  <label class="comment__label">Дата отъезда:<span class="marker-required">*</span></label>
+                  <input class="comment__input" id="last-date" type="text" name="date-departure" placeholder="28 июля 2015">
+                </div>    
+              </div>
+            </fieldset>
+          </div>
+          
+          <div class="comment__wrap">
+            <fieldset class="comment__set">
+              <legend class="commenr__set-legend">Кол-во путешественников:</legend>
+                <div class="input-numeric input-numeric--traveler">
+                  <span class="input-numeric__icon-minus">Минус</span>
+                  <input class="input-numeric__text" type="number" min="1" max="99" id="length-of-stay" name="length-of-stay"  value="1">
+                  <span class="input-numeric__label">чел.</span>
+                  <span class="input-numeric__icon-plus">Плюс</span>
+                </div>  
+                
+                <ol class="comment__traveler-list">
+                  <li class="traveler">
+                    <div class="comment__flex-wrap">
+                        <div class="comment__block comment__block--num">
+                          <label class="comment__label">№</label>
+                          <input class="comment__input" type="text" name="num1" placeholder="1">
+                        </div>
+                      <div class="comment__block comment__block--traveler">
+                        <label class="comment__label">Фамилия:<span class="marker-required">*</span></label>
+                        <input class="comment__input comment__input--traveler" type="text" name="l-name1" placeholder="Иванов">
+                      </div>
+                                        
+                      <div class="comment__block comment__block--traveler">
+                        <label class="comment__label">Имя:<span class="marker-required">*</span></label>
+                        <input class="comment__input comment__input--traveler" type="text" name="f-name1" placeholder="Петр">
+                      </div>
+                                        
+                      <div class="comment__block comment__block--traveler">
+                        <label class="comment__label">Отчество:</label>
+                        <input class="comment__input comment__input--traveler" type="text" name="mid-name1" placeholder="Александрович">
+                      </div>
+                    </div>
+                  </li>                      
+                  
+                </ol>
+            </fieldset>
+          </div>
+                  
+          <div class="comment__wrap">
+            <fieldset class="comment__set">
+              <legend class="comment__set-legend">Посещенные достопримечательности:</legend>
+              <div class="comment__flex-wrap">
+                <div class="comment__block">
+                  <input class="comment__checkbox" id="bridge" type="checkbox" name="bridge" checked>
+                  <label class="comment__label comment__label--btn comment__label--checkbox" for="bridge">Мост Дьявола</label>
+                </div>
+                <div class="comment__block">
+                  <input class="comment__checkbox" id="park" type="checkbox" name="park" >
+                  <label class="comment__label comment__label--btn comment__label--checkbox" for="park">Слайд-Парк</label>
+                </div>
+                <div class="comment__block">
+                  <input class="comment__checkbox" id="bell" type="checkbox" name="bell" checked>
+                  <label class="comment__label comment__label--btn comment__label--checkbox" for="bell">Гора-Колокол</label>
+                </div>
+                <div class="comment__block">
+                  <input class="comment__checkbox" id="rock" type="checkbox" name="rock" checked>
+                  <label class="comment__label comment__label--btn comment__label--checkbox" for="rock">Красные скалы</label>
+                </div> 
+              </div>
+            </fieldset>
+          </div>
+                  
+          <div class="comment__wrap">
+            <fieldset class="comment__set">
+              <legend class="comment__set-legend">Загрузите фотографии:</legend>
+                <div class="comment__file-load">
+                  <a class="btn comment__btn-load" href="#">
+                    Выбрать фотографии
+                    <input class="comment__file" type="file" name="images" id="upload-photo" value="Выбрать фотографии" multiple>
+                  </a>
+                  <ul class="upload-images"> </ul> 
+                </div>  
+            </fieldset>
+          </div>
+                  
+          <input class="btn btn-send" type="submit" value="Отправить отзыв">
+         <!-- <a href="#" class="btn btn-send">Отправить отзыв</a> -->
+        </form> 
+      </div>
       
     </main>
     
 
     
     <footer class="page-footer">  
-      <div class="page-footer-wrapper">
-        <div class="page-footer__hash-tag  page-footer__flex"><a class="hash-tag__link" href="">#visitsedona</a></div>
-        <div class="page-footer_social-btns  page-footer__flex">
-          <a href="#" class="social-btns__icon social-btns__icon-tw">Tw</a>
-          <a href="#" class="social-btns__icon social-btns__icon-fb">Fb</a>
-          <a href="#" class="social-btns__icon social-btns__icon-youtube">YT</a>
+      <div class="page-footer__wrap">
+        <div class="hash-tag"><a class="hash-tag__link" href="">#visitsedona</a></div>
+        <div class="social-btns">
+          <a href="#" class="social-btns__icon-tw">Sedona в Twitter</a>
+          <a href="#" class="social-btns__icon-fb">Sedona в Facebook</a>
+          <a href="#" class="social-btns__icon-youtube">Sedona  на Youtube</a>
         </div>
-        <div class="page-footer__designer  page-footer__flex"><a class="page-footer__designer-link" href="">Разработано </a></div>
+        <div class="designer"><a class="designer__icon-htmlacademy" href="">Разработано </a></div>
       </div>  
     </footer>
 
+
+    <div class="success-popup">
+      <div class="success-popup__msg">
+        <h1 class="success-popup__msg-title">Ваш отзыв отправлен!</h1>
+        <p class="success-popup__msg-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="success-popup__btn">
+        <!-- <button class="btn">Закрыть окно</button> -->
+        <a href="#" class="btn btn-close">Закрыть окно</a>
+      </div>
+    </div>
+
+
+    <div class="failure-popup">
+      <div class="failure-popup__msg">
+        <h1 class="failure-popup__msg-title">Что-то пошло не так!</h1>
+        <p class="failure-popup__msg-text">Проверьте поля, выделенные красным, скорее всего вы забыли из заполнить</p>
+      </div>
+      <div class="failure-popup__btn">
+        <!-- <button class="btn">Закрыть окно</button> -->
+        <a href="#" class="btn btn-close">Ok</a>
+      </div>
+    </div>
+
   </div>
-  
+  <!-- <script src=js/popup.js></script> -->
+
+  <script id="image-template" type"text/html">
+
+    <div class="upload-images__img-wrap">
+      <img class="upload-images__img" src="{{image}}" alt="{{name}}" title="{{name}}">
+    </div>
+    <a href="#" class="upload-images__del-link">Закрыть</a>
+
+  </script>
+
+  <script id="traveler-template" type"text/html">
+    <div class="comment__flex-wrap">
+        <div class="comment__block comment__block--num">
+          <label class="comment__label">№</label>
+          <input class="comment__input" type="text" name="num1" placeholder="{{num}}">
+        </div>
+      <div class="comment__block comment__block--traveler">
+        <label class="comment__label">Фамилия:<span class="marker-required">*</span></label>
+        <input class="comment__input comment__input--traveler" type="text" name="l-name1" placeholder="Иванов">
+      </div>
+                        
+      <div class="comment__block comment__block--traveler">
+        <label class="comment__label">Имя:<span class="marker-required">*</span></label>
+        <input class="comment__input comment__input--traveler" type="text" name="f-name1" placeholder="Петр">
+      </div>
+                        
+      <div class="comment__block comment__block--traveler">
+        <label class="comment__label">Отчество:</label>
+        <input class="comment__input comment__input--traveler" type="text" name="mid-name1" placeholder="Александрович">
+      </div>
+    </div>
+  </script>
+  <script src=js/form.js></script>
 
 </body>
 </html>
