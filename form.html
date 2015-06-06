@@ -80,7 +80,7 @@
           <div class="comment__wrap">
             <fieldset class="comment__set">
               <legend class="comment__set-legend">Ваше впечатление:</legend>
-                <div class="comment__flex-wrap">
+                <div class="comment__flex-wrap comment__flex-wrap--radio">
                   <div class="comment__block comment__block--radio">
                     <input class="comment__radio" type="radio" id="radio-plus" name="impression" value="positive" checked>
                     <label class="comment__label comment__label--btn comment__label--radio" for="radio-plus">Скорее положительное</label>
@@ -123,7 +123,7 @@
           
           <div class="comment__wrap">
             <fieldset class="comment__set">
-              <legend class="commenr__set-legend">Кол-во путешественников:</legend>
+              <legend class="comment__set-legend">Кол-во путешественников:</legend>
                 <div class="input-numeric input-numeric--traveler">
                   <span class="input-numeric__icon-minus">Минус</span>
                   <input class="input-numeric__text" type="number" min="1" max="99" id="length-of-stay" name="length-of-stay"  value="1">
@@ -136,7 +136,7 @@
                     <div class="comment__flex-wrap">
                         <div class="comment__block comment__block--num">
                           <label class="comment__label">№</label>
-                          <input class="comment__input" type="text" name="num1" placeholder="1">
+                          <input class="comment__input" type="text" name="num1" placeholder="1" disabled>
                         </div>
                       <div class="comment__block comment__block--traveler">
                         <label class="comment__label">Фамилия:<span class="marker-required">*</span></label>
@@ -162,20 +162,20 @@
           <div class="comment__wrap">
             <fieldset class="comment__set">
               <legend class="comment__set-legend">Посещенные достопримечательности:</legend>
-              <div class="comment__flex-wrap">
-                <div class="comment__block">
+              <div class="comment__flex-wrap comment__flex-wrap--check">
+                <div class="comment__block-checkbox">
                   <input class="comment__checkbox" id="bridge" type="checkbox" name="bridge" checked>
                   <label class="comment__label comment__label--btn comment__label--checkbox" for="bridge">Мост Дьявола</label>
                 </div>
-                <div class="comment__block">
+                <div class="comment__block-checkbox">
                   <input class="comment__checkbox" id="park" type="checkbox" name="park" >
                   <label class="comment__label comment__label--btn comment__label--checkbox" for="park">Слайд-Парк</label>
                 </div>
-                <div class="comment__block">
+                <div class="comment__block-checkbox">
                   <input class="comment__checkbox" id="bell" type="checkbox" name="bell" checked>
                   <label class="comment__label comment__label--btn comment__label--checkbox" for="bell">Гора-Колокол</label>
                 </div>
-                <div class="comment__block">
+                <div class="comment__block-checkbox">
                   <input class="comment__checkbox" id="rock" type="checkbox" name="rock" checked>
                   <label class="comment__label comment__label--btn comment__label--checkbox" for="rock">Красные скалы</label>
                 </div> 
@@ -186,17 +186,17 @@
           <div class="comment__wrap">
             <fieldset class="comment__set">
               <legend class="comment__set-legend">Загрузите фотографии:</legend>
-                <div class="comment__file-load">
-                  <a class="btn comment__btn-load" href="#">
-                    Выбрать фотографии
-                    <input class="comment__file" type="file" name="images" id="upload-photo" value="Выбрать фотографии" multiple>
-                  </a>
-                  <ul class="upload-images"> </ul> 
-                </div>  
+                <div class="upload-images">
+                  <div class="upload-images__file-load">
+                    <span class="upload-images__btn btn btn--blue " href="#">Выбрать фотографии</span>
+                    <input class="upload-images__file" type="file" name="images" id="upload-photo" value="Выбрать фотографии" multiple>
+                  </div>  
+                  <ul class="upload-images__area"> </ul> 
+                </div>
             </fieldset>
           </div>
                   
-          <input class="btn btn-send" type="submit" value="Отправить отзыв">
+          <input class="btn btn--blue btn-send" type="submit" value="Отправить отзыв">
          <!-- <a href="#" class="btn btn-send">Отправить отзыв</a> -->
         </form> 
       </div>
@@ -209,9 +209,9 @@
       <div class="page-footer__wrap">
         <div class="hash-tag"><a class="hash-tag__link" href="">#visitsedona</a></div>
         <div class="social-btns">
-          <a href="#" class="social-btns__icon-tw">Sedona в Twitter</a>
-          <a href="#" class="social-btns__icon-fb">Sedona в Facebook</a>
-          <a href="#" class="social-btns__icon-youtube">Sedona  на Youtube</a>
+          <a href="#" class="social-btns__icon-tw btn btn--blue">Sedona в Twitter</a>
+          <a href="#" class="social-btns__icon-fb btn btn--blue">Sedona в Facebook</a>
+          <a href="#" class="social-btns__icon-youtube btn btn--blue">Sedona  на Youtube</a>
         </div>
         <div class="designer"><a class="designer__icon-htmlacademy" href="">Разработано </a></div>
       </div>  
@@ -257,7 +257,7 @@
     <div class="comment__flex-wrap">
         <div class="comment__block comment__block--num">
           <label class="comment__label">№</label>
-          <input class="comment__input" type="text" name="num1" placeholder="{{num}}">
+          <input class="comment__input" type="text" name="num1" placeholder="{{num}}" desabled>
         </div>
       <div class="comment__block comment__block--traveler">
         <label class="comment__label">Фамилия:<span class="marker-required">*</span></label>

@@ -1,7 +1,5 @@
 @keyframes menu-open {
     0%   { transform: translateY(-228px); }
-    30%  { transform: translateY(-140px);    }
-    60%  { transform: translateY(-70px);   }
     100% { transform: translateY(0);       }
 }
 
@@ -20,29 +18,88 @@
 
   &__list {
     .destroy-list();
+
+    @media(min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
-  &__link a {
-    display: inline-block;
-    width: 100%;
-    font-size: @font-size-middle;
-    line-height: 55px;
-    font-weight: 700;
-    color: @color--light;
-    background: @bg-middle;
-    // box-shadow: inset 0 1px 5px -1px #cde1ed,    
-    //             inset 0 -1px 5px -1px #000;
-   
-    // background-image: linear-gradient(to bottom, 
-    //  #9ac2db 2%, 
-    //  #81b3d2 2%, 
-    //  #81b3d2 98%, 
-    //  #678fa8 98%);
-    border-bottom: 1px solid #678fa8;
-    border-top: 1px solid #9ac2db;
-    
+  &__link {
+
+    @media(min-width: 768px) {
+      width: 20%;
+
+      &:nth-child(4n-2) {
+        margin-right: 20%;
+      }
+    }    
+
+    a {
+      display: inline-block;
+      width: 100%;
+      font-size: @font-size-middle;
+      line-height: 55px;
+      font-weight: 700;
+      color: @color--light;
+      background: @bg-middle;
+      // box-shadow: inset 0 1px 5px -1px #cde1ed,    
+      //             inset 0 -1px 5px -1px #000;
+     
+      border-bottom: 1px solid #678fa8;
+      border-top: 1px solid #9ac2db;
+
+      @media(min-width: 768px) {
+        color: @color--dark;
+        background: #fff;
+        border: none;
+        box-shadow: none;
+      }
+
+      &:hover{
+        background: @c-hover;
+
+        @media(min-width: 768px) {
+          background: #fff;
+          color: @bg-middle;
+        }
+      }
+
+      &:active {
+        background: @c-active;
+        color: @c-active-text;
+        
+        @media(min-width: 768px) {
+          background: #fff;
+          color: @c-active-logo;
+        }
+      }
+    } 
+
+    a.main-nav__active {
+
+      @media(min-width: 768px) {
+        color: #766357;
+      }
+
+      &:hover{
+        
+        @media(min-width: 768px) {
+          color: #604e43;
+        }
+      }
+
+      &:active {
+        
+        @media(min-width: 768px) {
+          color: #d6d0cc;
+        }
+      }
+    }  
   }
+
   
+
   &__close {
     position: absolute;
     top: 18px;
@@ -52,14 +109,17 @@
     z-index: @z2;
     font-size: 0;
     background: url("../img/icon-close.png");
+
+    @media(min-width: 768px) {
+      display: none;
+    }
   }
 
   &__show {
     display: block;
-    // animation: menu-open 0.4s;
+    animation: menu-open 0.4s;
     transform: translateY(0);
   }
-
 }
 
 .logo {
@@ -69,6 +129,14 @@
   font-size: 0;
   background: url(../img/logo-triangle.svg) no-repeat center ;
   z-index: 10;
+
+  @media(min-width: 768px) {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left:40%;
+    width: 20%;
+  }
 }
 
 .toggle {
@@ -80,51 +148,11 @@
   z-index: @z2;
   font-size: 0;
   background: url("../img/icon-toggle.png");
-}
 
-
-
-@media(min-width: 768px) {
-  .main-nav {
-
-    &__list {
-      display: flex;
-      flex-wrap: wrap;      
-    }
-
-    &__link {
-      width: 20%;
-
-      &:nth-child(4n-2) {
-        margin-right: 20%;
-      }
-    }
-
-    &__link a {
-      color: @color--dark;
-      background: #fff;
-      border: none;
-      box-shadow: none;
-    }
-
-    &__close {
-      display: none;
-    }
-  }
-
-  .logo {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left:40%;
-    width: 20%;
-
-    &::before {   // голубой треугольник - фон для логотипа
-    }
-  }
-
-  .toggle {
+  @media(min-width: 768px) {
     display: none;
   }
 }
+
+
 

@@ -113,7 +113,7 @@
   //Загрузка фотографий
 
   if ('FileReader' in window) {
-    var area=document.querySelector('.upload-images');
+    var area=document.querySelector('.upload-images__area');
     var template = document.querySelector("#image-template").innerHTML;
     var queue=[];
 

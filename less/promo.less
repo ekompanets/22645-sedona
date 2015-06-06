@@ -2,6 +2,9 @@
 
   &__header {
     padding: 20px 20px;  
+    @media(min-width: 768px) {
+      padding: 40px 140px;
+    }
   }
 
   &__title {
@@ -22,10 +25,29 @@
 
   &__reason-list {
     .destroy-list();
+    @media(min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__reason {    
-    position: relative;
+    position: relative;    
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: 768px) {
+      width: 33.33%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;      
+    }
+  }
+
+  &:not(:last-child):not(&__reason--color):after {
+    @media(min-width: 768px) {
+      display: none;
+    }
   }
 
   &__reason:first-child:before {
@@ -37,7 +59,23 @@
     height: 16px;
     background: linear-gradient(to right top, #81b3d2 49%, transparent 51%) no-repeat left top, linear-gradient(to left top, #81b3d2 49%, transparent 51%) no-repeat right top;
     background-size: 50% 100%;
+
+    @media(min-width: 768px) {
+      display: none;
+    }
   }
+
+  &__reason--color {
+    @media(min-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__reason--color:nth-of-type(2n) &__reason-header {
+      @media(min-width: 768px) {
+      order:2;
+    }
+    }
 
   &__reason-with-picture {
 
@@ -45,39 +83,46 @@
       display: block;
       content: '';
       font-size: 0;
-      height: 255px;
+      min-height: 255px;
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    @media(min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      &:after {
+        width: 67%;
+      }
     }
   }
 
   &__reason-with-picture--city:after {
     background-image: url('../img/photo-city@1x.jpg');
+    @media (min-resolution: 1.5dppx) {
+      background-image: url('../img/photo-city@2x.jpg');
+    }
   }
 
-  &__reason-with-picture--bridge:after {
+  &__reason-with-picture--bridge:after  {
     background-image: url('../img/photo-bridge@1x.jpg');
-  }
-
-  &__reason-picture {    
-    font-size: 0;
-    height: 255px;
-    background-image: url('../img/photo-city@1x.jpg');
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    img {
-      width: 100%;
-      height: auto;
+    @media (min-resolution: 1.5dppx) {
+      background-image: url('../img/photo-bridge@2x.jpg');
     }
   }
 
   &__reason-header {
-    padding: 25px 0 28px 0;
+    padding: 40px 20px;
     background: @bg-light;  
     color: @color--dark; 
+
+    @media (min-width: 768px) {
+      flex-grow: 1;
+      padding: 40px 45px;
+    }
   }    
   
 
@@ -93,18 +138,30 @@
   }
 
   &__reason-header--color {
-    padding: 40px 20px;
     background: @bg-middle;   
     color: @color--light;
+
+    @media(min-width: 768px) {
+      width: 33%;
+    }
   }
 
   &__reason-title { 
     margin: 0;   
-    padding-bottom: 45px;
+    padding: 0 10px;
     font-size: @font-size-middle;
     line-height: 1.44em;
     font-weight: @font-weight-bold;
   } 
+
+  &__reason-num {
+
+    &:before, 
+    &:after {
+      content: '\2014';
+      padding: 0 5px;
+    }
+  }
 
   &__reason-descr {    
     font-size: @font-size;
@@ -113,12 +170,23 @@
 
   &__reason-content {
     .destroy-list();     
-    padding: 20px;    
+    padding: 20px;   
+
+
+    @media(min-width: 768px) {
+      padding: 0;   
+      display: flex; 
+    } 
+
   }
 
   &__subreason {
     position: relative;
     padding: 15px 0 15px 50px;
+
+    @media(min-width: 768px) {
+      padding: 160px 45px 40px;
+    }
   }
 
   &__subreason--house:before,
@@ -132,7 +200,20 @@
     width: 40px;
     height: 40px;
     background-size: contain;
+
+    @media(min-width: 768px) {
+      top: 60px;
+      width: 100%;
+      height: 70px;
+    }
   }
+
+  &__subreason--gift {
+    @media(min-width: 768px) {
+      order:3;
+    }
+  } 
+
 
   &__subreason--house:before {
     background: url("../img/icon-house.svg") no-repeat center;    
@@ -156,6 +237,10 @@
     line-height: 1.44em;
     font-weight: @font-weight-bold;
     text-align: left;
+
+    @media(min-width: 768px) {
+      text-align: center;
+    }
   }
     
   &__subreason-text {
@@ -163,114 +248,16 @@
     font-size: @font-size;      
     line-height: 1.5em;
     text-align: left;
-  }
 
-}
-
-
-@media(min-width: 768px) {
-  .promo {
-
-    &__header {
-      padding: 40px 140px;  
-    }
-
-    
-    &__reason-list {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    &__reason {    
-      width: 33.33%;
-
-      &:not(:last-child):not(&__reason--color):after {
-        display: none;
-      }
-    }
-
-    &__reason:first-child:before {
-      display: none;
-    }
-
-    &__reason--color {    
-      width: 100%;
-    }
-
-    &__reason--color:nth-of-type(2n) &__reason-header {
-      order: 2;
-    }
-
-    // &__reason--color:nth-of-type(2n) &__reason-picture {
-    //   order: 1;
-    // }
-
-    &__reason:after {
-      display: none;
-    }
-    
-    &__reason-header--color {
-      width: 33%;
-    }
-    
-    &__reason-picture {
-      width: 67%;
-      img {
-        width: ;
-      }
-    }
-
-    &__reason-with-picture {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-
-      &:after {
-        width: 67%;
-      }
-    }    
-
-    &__reason-content {
-      padding: 0;   
-      display: flex;      
-    }  
-
-    &__subreason {
-      padding: 160px 50px 40px;
-    }
-
-    &__subreason--gift {
-      order:3;
-    }
-
-    &__subreason--house:before,
-    &__subreason--gift:before,
-    &__subreason--food:before {
-      top: 60px;
-      width: 100%;
-      height: 70px;
-    }
-
-    &__subreason-title,
-    &__subreason-text {
+    @media(min-width: 768px) {
       text-align: center;
     }
-
   }
+
 }
 
 
 
-@media (min-resolution: 1.5dppx) {
-  .promo {
-    &__reason-with-picture--city:after {
-      background-image: url('../img/photo-city@2x.jpg');
-    }
 
-    &__reason-with-picture--bridge:after {
-      background-image: url('../img/photo-bridge@2x.jpg');
-    }
-  }
-}
 
   
