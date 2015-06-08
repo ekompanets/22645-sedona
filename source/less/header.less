@@ -1,0 +1,160 @@
+@keyframes menu-open {
+    0%   { transform: translateY(-228px); }
+    100% { transform: translateY(0);       }
+}
+
+.page-header {
+  position: relative;  
+}
+
+
+.main-nav {
+  position: relative;
+  display: none;
+  transition: transform 0.3s ease;
+
+  @media (min-width: @point-tablet) {
+    display: block;
+  }
+
+  &__list {
+    .destroy-list();
+
+    @media (min-width: @point-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__link {
+
+    @media (min-width: @point-tablet) {
+      width: 20%;
+
+      &:nth-child(4n-2) {
+        margin-right: 20%;
+      }
+    }    
+
+    a {
+      display: inline-block;
+      width: 100%;
+      font-size: @font-size-middle;
+      line-height: 55px;
+      font-weight: 700;
+      color: @color--light;
+      background: @bg-middle;
+      border-bottom: 1px solid #678fa8;
+      border-top: 1px solid #9ac2db;
+
+      @media (min-width: @point-tablet) {
+        color: @color--dark;
+        background: #fff;
+        border: none;
+        box-shadow: none;
+      }
+
+      &:hover{
+        background: @c-hover;
+
+        @media (min-width: @point-tablet) {
+          background: #fff;
+          color: @bg-middle;
+        }
+      }
+
+      &:active {
+        background: @c-active;
+        color: @c-active-text;
+        
+        @media (min-width: @point-tablet) {
+          background: #fff;
+          color: @c-active-logo;
+        }
+      }
+    } 
+
+    a.main-nav__active {
+
+      @media (min-width: @point-tablet) {
+        color: #766357;
+      }
+
+      &:hover{
+        
+        @media (min-width: @point-tablet) {
+          color: #604e43;
+        }
+      }
+
+      &:active {
+        
+        @media (min-width: @point-tablet) {
+          color: #d6d0cc;
+        }
+      }
+    }  
+  }
+
+  
+
+  &__close {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    width: 23px;
+    height: 22px;
+    z-index: @z2;
+    font-size: 0;
+    svg {
+      fill: #fff;
+    }
+
+    @media (min-width: @point-tablet) {
+      display: none;
+    }
+  }
+
+  &__show {
+    display: block;
+    animation: menu-open 0.4s;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  position: relative;
+  height: 70px;
+  margin-bottom: -15px;
+  font-size: 0;
+  background: url(../img/logo-triangle.svg) no-repeat center ;
+  z-index: 10;
+
+  @media (min-width: @point-tablet) {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left:40%;
+    width: 20%;
+  }
+}
+
+.toggle {
+  position: absolute;
+  bottom: 35px;
+  right: 30px;
+  width: 23px;
+  height: 22px;
+  z-index: @z2;
+  font-size: 0;
+  svg {
+    fill: @bg-middle;
+  }
+
+  @media (min-width: @point-tablet) {
+    display: none;
+  }
+}
+
+
+
